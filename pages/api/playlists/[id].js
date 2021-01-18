@@ -3,10 +3,10 @@
  * GET a playlist by ID
  */
 
-import { db as dbConnection } from "../_db";
+import databaseConnection from "../_db";
 
 export default async (req, res) => {
-  dbConnection();
+  await databaseConnection;
   res.statusCode = 200;
-  res.json({ db: "connected" });
+  res.json({ working: true });
 };

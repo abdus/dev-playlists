@@ -18,6 +18,7 @@ const UserProfile = (props) => {
         .then((res) => res.json())
         .then((user) => {
           setUser(user);
+          console.log(user);
         });
     }
   }, []);
